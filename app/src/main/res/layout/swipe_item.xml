@@ -11,91 +11,34 @@
     app:cardCornerRadius="8dp"
     app:cardBackgroundColor="@android:color/white">
 
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/item_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="26sp"/>
-
-        <TextView
-            android:id="@+id/item_age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-
-    <!--<FrameLayout
-        android:id="@+id/left_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/overlay_black">
-
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_forward_black_24dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="bottom"
+            android:padding="16dp">
 
-    </FrameLayout>
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"/>
 
-    <FrameLayout
-        android:id="@+id/right_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/overlay_black">
+            <TextView
+                android:id="@+id/item_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:layout_gravity="center"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/top_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/overlay_black">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_downward_black_24dp"
-            android:layout_gravity="center"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/bottom_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/overlay_black">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_upward_black_24dp"
-            android:layout_gravity="center"/>
-
-    </FrameLayout>-->
-
+        </LinearLayout>
 </androidx.cardview.widget.CardView>
