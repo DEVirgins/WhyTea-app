@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.itinder_java.Person;
 import com.example.itinder_java.R;
 
 import java.util.List;
@@ -33,7 +34,7 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
     public void onBindViewHolder(NotificationsAdapter.ViewHolder holder, int position){
 
         position = 2 * position;
-        if(position <= items.size()){
+        if(position < items.size()){
             Person item = items.get(position);
             holder.imageView.first.setImageResource(item.getImage());
             holder.nameView.first.setText(item.getName());

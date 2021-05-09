@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.itinder_java.R;
-import com.example.itinder_java.ui.Person;
+import com.example.itinder_java.Person;
 import com.example.itinder_java.ui.NotificationsAdapter;
 
 import java.util.ArrayList;
@@ -30,13 +30,9 @@ public class NotificationsFragment extends Fragment {
         return root;
     }
     private void setData(){
-        items.add(new Person(R.drawable.photo1, "Агата1", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата2", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата3", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата4","Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата5", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата6", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата7", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.fahri, "Фахри", "Санкт-Петербург", "InfoLab",Arrays.asList("frontend", "react")));
+        items.add(new Person(R.drawable.irina, "Ирина", "Санкт-Петербург", "InfoLab", Arrays.asList("design", "ML")));
+        items.add(new Person(R.drawable.matvei, "Матвей","Санкт-Петербург", "InfoLab", Arrays.asList("frontend", "backend")));
 
     }
 

@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import com.example.itinder_java.CardStackAdapter;
 import com.example.itinder_java.CardStackCallback;
 import com.example.itinder_java.R;
-import com.example.itinder_java.ui.Person;
+import com.example.itinder_java.Person;
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
 import com.yuyakaido.android.cardstackview.CardStackListener;
 import com.yuyakaido.android.cardstackview.CardStackView;
@@ -25,7 +25,6 @@ import com.yuyakaido.android.cardstackview.Direction;
 import com.yuyakaido.android.cardstackview.StackFrom;
 import com.yuyakaido.android.cardstackview.SwipeableMethod;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -119,13 +118,9 @@ public class DashboardFragment extends Fragment {
 
     private List<Person> addList() {
         List<Person> items = new ArrayList<>();
-        items.add(new Person(R.drawable.photo1, "Агата1", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата2", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата3", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата4","Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата5", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата6", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
-        items.add(new Person(R.drawable.photo1, "Агата7", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.fahri, "Фахри", "Санкт-Петербург", "InfoLab",Arrays.asList("frontend", "react")));
+        items.add(new Person(R.drawable.irina, "Ирина", "Санкт-Петербург", "InfoLab", Arrays.asList("design", "ML")));
+        items.add(new Person(R.drawable.matvei, "Матвей","Санкт-Петербург", "InfoLab", Arrays.asList("frontend", "backend")));
         return items;
     }
 
