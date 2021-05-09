@@ -4,13 +4,13 @@ import java.util.List;
 
 import androidx.recyclerview.widget.DiffUtil;
 
-import com.example.itinder_java.ui.ItemModel;
+import com.example.itinder_java.ui.Person;
 
 public class CardStackCallback extends DiffUtil.Callback {
 
-    private List<ItemModel> old, stack;
+    private List<Person> old, stack;
 
-    public CardStackCallback(List<ItemModel> old, List<ItemModel> stack) {
+    public CardStackCallback(List<Person> old, List<Person> stack) {
         this.old = old;
         this.stack = stack;
     }

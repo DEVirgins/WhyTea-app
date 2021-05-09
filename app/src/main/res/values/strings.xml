@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">ITinder-java</string>
+    <string name="app_name">WhyTea</string>
     <string name="home_title">home</string>
     <string name="dashboard_title">dashboard</string>
     <string name="notifications_title">notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="entry">Войти через Google</string>
+    <string name="skills">Навыки</string>
+    <string name="descr">Описание:</string>
 </resources>

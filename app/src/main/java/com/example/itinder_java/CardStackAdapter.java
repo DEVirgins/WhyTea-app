@@ -3,22 +3,21 @@ package com.example.itinder_java;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.itinder_java.ui.ItemModel;
+import com.example.itinder_java.ui.Person;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.ViewHolder> {
-    private List<ItemModel> items;
+    private List<Person> items;
 
-    public CardStackAdapter(List<ItemModel> items) {
+    public CardStackAdapter(List<Person> items) {
         this.items = items;
     }
 
@@ -50,22 +49,22 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
             age = itemView.findViewById(R.id.item_age);
         }
 
-        void setData(ItemModel data) {
+        void setData(Person data) {
             Picasso.get()
                     .load(data.getImage())
                     .fit()
                     .centerCrop()
                     .into(image);
             name.setText(data.getName());
-            age.setText(data.getAge());
+            age.setText(data.getCity());
         }
     }
 
-    public List<ItemModel> getItems() {
+    public List<Person> getItems() {
         return items;
     }
 
-    public void setItems(List<ItemModel> items) {
+    public void setItems(List<Person> items) {
         this.items = items;
     }
 }

@@ -7,6 +7,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -23,10 +24,14 @@ public class EntryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_entry);
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
+                .requestServerAuthCode("614743996912-ectf4r4sj222m10lrmn3lo2pd3c4sjm3.apps.googleusercontent.com")
                 .build();
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        updateUI(account);
         GoogleSignInClient signInClient = GoogleSignIn.getClient(this, gso);
         findViewById(R.id.signIn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +65,7 @@ public class EntryActivity extends AppCompatActivity {
             updateUI(account);
         } catch (ApiException e) {
             Log.w(EntryActivity.class.getSimpleName(), "signInResult:failed code=" + e.getStatusCode());
-            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "hellooo", Toast.LENGTH_SHORT).show();
             updateUI(null);
         }
     }

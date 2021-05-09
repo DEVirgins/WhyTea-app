@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import com.example.itinder_java.CardStackAdapter;
 import com.example.itinder_java.CardStackCallback;
 import com.example.itinder_java.R;
-import com.example.itinder_java.ui.ItemModel;
+import com.example.itinder_java.ui.Person;
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
 import com.yuyakaido.android.cardstackview.CardStackListener;
 import com.yuyakaido.android.cardstackview.CardStackView;
@@ -25,7 +25,9 @@ import com.yuyakaido.android.cardstackview.Direction;
 import com.yuyakaido.android.cardstackview.StackFrom;
 import com.yuyakaido.android.cardstackview.SwipeableMethod;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DashboardFragment extends Fragment {
@@ -107,21 +109,23 @@ public class DashboardFragment extends Fragment {
     }
 
     private void paginate() {
-        List<ItemModel> old = adapter.getItems();
-        List<ItemModel> stack = new ArrayList<>(addList());
+        List<Person> old = adapter.getItems();
+        List<Person> stack = new ArrayList<>(addList());
         CardStackCallback callback = new CardStackCallback(old, stack);
         DiffUtil.DiffResult res = DiffUtil.calculateDiff(callback);
         adapter.setItems(stack);
         res.dispatchUpdatesTo(adapter);
     }
 
-    private List<ItemModel> addList() {
-        List<ItemModel> items = new ArrayList<>();
-        items.add(new ItemModel(R.drawable.photo1, "Матвей1", "23"));
-        items.add(new ItemModel(R.drawable.photo1, "Матвей2", "20"));
-        items.add(new ItemModel(R.drawable.photo1, "Матвей3", "27"));
-        items.add(new ItemModel(R.drawable.photo1, "Матвей4", "19"));
-        items.add(new ItemModel(R.drawable.photo1, "Матвей5", "25"));
+    private List<Person> addList() {
+        List<Person> items = new ArrayList<>();
+        items.add(new Person(R.drawable.photo1, "Агата1", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата2", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата3", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата4","Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата5", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата6", "Moscow", "Lucsoft",Arrays.asList("desin", "python", "PM")));
+        items.add(new Person(R.drawable.photo1, "Агата7", "Moscow", "Lucsoft", Arrays.asList("desin", "python", "PM")));
         return items;
     }
 
